@@ -1,0 +1,160 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: #333;
+}
+
+/* Page Visibility */
+.page {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.page.active {
+    display: flex;
+}
+
+/* Main Container */
+.main-container {
+    text-align: center;
+    max-width: 500px;
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1.5s ease;
+}
+
+/* SVG Graphic */
+.graphic {
+    margin-bottom: 20px;
+}
+
+svg {
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Text Content */
+h1 {
+    font-size: 2rem;
+    color: #ff6f61;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Emoji Decoration */
+.emoji-container {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Buttons */
+.forgive-btn, .back-btn {
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.forgive-btn:hover, .back-btn:hover {
+    background: #e55c4f;
+    transform: scale(1.05);
+}
+
+.back-btn {
+    background: #6BCB77;
+}
+
+.back-btn:hover {
+    background: #58A666;
+}
+
+/* Bye Page */
+.bye-message {
+    font-size: 2rem;
+    color: #6BCB77;
+    animation: wave 2s infinite ease-in-out;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+body {
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    background-size: cover; /* Ensures the background covers the viewport */
+    background-position: center; /* Centers the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: #333;
+}
+
